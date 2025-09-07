@@ -28,6 +28,7 @@ export default function Home() {
     ],
   };
 
+  // function to open the modal when needed in future
   const openModal = (category: string) => {
     setSelectedCategory(category);
     setActiveIndex(0);
@@ -66,6 +67,7 @@ export default function Home() {
     touchStartX.current = null;
   };
 
+  // Inline the key handlers to avoid depending on goPrev/goNext in deps
   useEffect(() => {
     const onKey = (ev: KeyboardEvent) => {
       if (!isModalOpen) return;
@@ -261,7 +263,13 @@ export default function Home() {
             const onTouchEndCol: React.TouchEventHandler<HTMLDivElement> = (e) => {
               if (touchStartX.current === null) return;
               const dx = e.changedTouches[0].clientX - touchStartX.current;
-              if (Math.abs(dx) > 40) { dx > 0 ? prev() : next(); }
+              if (Math.abs(dx) > 40) {
+                if (dx > 0) {
+                  prev();
+                } else {
+                  next();
+                }
+              }
               touchStartX.current = null;
             };
 
@@ -338,7 +346,7 @@ export default function Home() {
                   className="w-9 h-9 rounded"
                 />
                 <div>
-                  <p className="text-lg font-semibold text-purple-800">Likha's</p>
+                  <p className="text-lg font-semibold text-purple-800">Likha&apos;s</p>
                   <p className="text-sm text-gray-600">Handcrafted Bags</p>
                 </div>
               </div>

@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="watercolor1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4E8;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#A8E6CF;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="watercolor2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DDA0DD;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#98FB98;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circles for watercolor effect -->
+  <circle cx="50" cy="50" r="40" fill="url(#watercolor1)" opacity="0.6"/>
+  <circle cx="150" cy="70" r="35" fill="url(#watercolor2)" opacity="0.5"/>
+  <circle cx="120" cy="130" r="30" fill="url(#watercolor1)" opacity="0.4"/>
+  <circle cx="70" cy="140" r="25" fill="url(#watercolor2)" opacity="0.6"/>
+  
+  <!-- Main Likha text -->
+  <text x="100" y="120" text-anchor="middle" font-family="cursive, serif" font-size="48" font-weight="bold" fill="#6B46C1">Likha</text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.7">
+    <!-- Scissors -->
+    <path d="M35 35 L45 45 M45 35 L35 45" stroke="#8B5CF6" stroke-width="3" fill="none"/>
+    <!-- Needle -->
+    <line x1="160" y1="25" x2="170" y2="35" stroke="#8B5CF6" stroke-width="3"/>
+    <circle cx="170" cy="35" r="3" fill="#8B5CF6"/>
+    <!-- Thread -->
+    <path d="M25 150 Q35 140 45 150 Q55 160 65 150" stroke="#8B5CF6" stroke-width="2" fill="none"/>
+    <!-- Hearts -->
+    <path d="M140 160 C140 150, 150 150, 150 160 C150 150, 160 150, 160 160 C160 170, 150 180, 140 170 Z" fill="#FF69B4" opacity="0.6"/>
+    <!-- Additional small hearts -->
+    <path d="M30 30 C30 25, 35 25, 35 30 C35 25, 40 25, 40 30 C40 35, 35 40, 30 35 Z" fill="#FF69B4" opacity="0.4"/>
+    <path d="M165 165 C165 160, 170 160, 170 165 C170 160, 175 160, 175 165 C175 170, 170 175, 165 170 Z" fill="#FF69B4" opacity="0.4"/>
+  </g>
+</svg>

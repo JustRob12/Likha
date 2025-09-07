@@ -1,0 +1,35 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="watercolor1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4E8;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#A8E6CF;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="watercolor2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DDA0DD;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#98FB98;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circles for watercolor effect -->
+  <circle cx="30" cy="30" r="25" fill="url(#watercolor1)" opacity="0.6"/>
+  <circle cx="90" cy="40" r="20" fill="url(#watercolor2)" opacity="0.5"/>
+  <circle cx="70" cy="80" r="18" fill="url(#watercolor1)" opacity="0.4"/>
+  <circle cx="40" cy="85" r="15" fill="url(#watercolor2)" opacity="0.6"/>
+  
+  <!-- Main Likha text -->
+  <text x="60" y="70" text-anchor="middle" font-family="cursive, serif" font-size="28" font-weight="bold" fill="#6B46C1">Likha</text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.7">
+    <!-- Scissors -->
+    <path d="M20 20 L25 25 M25 20 L20 25" stroke="#8B5CF6" stroke-width="2" fill="none"/>
+    <!-- Needle -->
+    <line x1="95" y1="15" x2="100" y2="20" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="100" cy="20" r="2" fill="#8B5CF6"/>
+    <!-- Thread -->
+    <path d="M15 90 Q20 85 25 90 Q30 95 35 90" stroke="#8B5CF6" stroke-width="1.5" fill="none"/>
+    <!-- Hearts -->
+    <path d="M85 95 C85 90, 90 90, 90 95 C90 90, 95 90, 95 95 C95 100, 90 105, 85 100 Z" fill="#FF69B4" opacity="0.6"/>
+  </g>
+</svg>

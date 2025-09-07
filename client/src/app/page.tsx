@@ -143,16 +143,8 @@ export default function Home() {
             <a href="#about" className="text-purple-800 hover:text-purple-600 transition-colors">About</a>
           </nav>
 
-          {/* Shopping Cart */}
-          <div className="flex items-center">
-            {/* <Image
-              src="/images/logos/shopping-cart.svg"
-              alt="Cart"
-              width={24}
-              height={24}
-              className="w-6 h-6"
-            /> */}
-          </div>
+          {/* Right side intentionally empty to keep nav centered like your screenshot */}
+          <div className="flex items-center" />
         </div>
       </header>
 

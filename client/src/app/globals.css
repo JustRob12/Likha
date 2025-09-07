@@ -25,6 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Floating bubble background */
 .bubble-float {
   animation: bubbleFloat var(--dur, 18s) ease-in-out infinite;

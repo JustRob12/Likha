@@ -191,7 +191,7 @@ export default function Home() {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            <button className="bg-gradient-to-r from-purple-600 to-teal-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2">
+            <a href="#shop" className="bg-gradient-to-r from-purple-600 to-teal-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2">
               <Image
                 src="/images/logos/shopping-cart.svg"
                 alt="Shop"
@@ -200,11 +200,11 @@ export default function Home() {
                 className="w-5 h-5 filter brightness-0 invert"
               />
               <span>Shop Now</span>
-            </button>
+            </a>
             
-            <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105">
+            <a href="#collections" className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105">
               View Collection
-            </button>
+            </a>
           </div>
         </div>
       </main>

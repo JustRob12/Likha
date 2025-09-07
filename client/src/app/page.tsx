@@ -70,8 +70,14 @@ export default function Home() {
     const onKey = (ev: KeyboardEvent) => {
       if (!isModalOpen) return;
       if (ev.key === "Escape") closeModal();
-      if (ev.key === "ArrowLeft") goPrev();
-      if (ev.key === "ArrowRight") goNext();
+      if (!selectedCategory) return;
+      const items = products[selectedCategory] ?? [];
+      if (ev.key === "ArrowLeft") {
+        setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
+      }
+      if (ev.key === "ArrowRight") {
+        setActiveIndex((prev) => (prev + 1) % items.length);
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -100,11 +106,12 @@ export default function Home() {
         {bubbles.map((b, i) => {
           const hues = ["from-purple-300 to-pink-200", "from-teal-200 to-purple-200", "from-purple-200 to-indigo-200"]; 
           const hue = hues[b.hueIndex % hues.length];
+          const styleVars = { "--dur": `${b.duration}s` } as React.CSSProperties & Record<'--dur', string>;
           return (
             <div
               key={i}
               className={`bubble-float absolute rounded-full bg-gradient-to-br ${hue} opacity-30 blur-2xl`}
-              style={{ width: b.size, height: b.size, left: `${b.left}%`, top: `${b.top}%`, animationDelay: `${b.delay}s`, ['--dur' as any]: `${b.duration}s` }}
+              style={{ width: b.size, height: b.size, left: `${b.left}%`, top: `${b.top}%`, animationDelay: `${b.delay}s`, ...styleVars }}
             />
           );
         })}
@@ -122,7 +129,7 @@ export default function Home() {
               className="w-10 h-10"
             />
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-purple-800">Likha's</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-purple-800">Likha&apos;s</h1>
               <p className="text-sm text-gray-600">Handcrafted Bags</p>
             </div>
           </div>
@@ -165,7 +172,7 @@ export default function Home() {
           {/* Brand Name with Gradient */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
             <span className="bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent">
-              Likha's
+              Likha&apos;s
             </span>
           </h2>
 
@@ -214,7 +221,7 @@ export default function Home() {
               className="w-64 sm:w-72 md:w-80 h-auto mx-auto"
             />
             <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600 mb-3">If the QR code doesn’t work, click this:</p>
+              <p className="text-sm text-gray-600 mb-3">If the QR code doesn&apos;t work, click this:</p>
               <a
                 href="https://form.jotform.com/252493995340466"
                 target="_blank"
